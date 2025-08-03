@@ -29,6 +29,9 @@ app.use('/api/v1/todo',require('./routes/todoRoute'));
 
 //port
 const PORT=process.env.PORT || 8000;
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
 
 //listen
 app.listen(PORT,()=>{
